@@ -1,12 +1,50 @@
 <h2>Neighborhood bulletin board</h2>
 
+<table board="1"><th>Title Post</th></table>
 
-<form action="/posts">
-  <label for="browser_username">Create a post</label>
-  <input id="browser_username" type="text" name="input_username" placeholder="Enter a username...">
+<form action="/">
+  
+<textarea type="Title" ></textarea>
+  <br>
+  </br>
+  <div>
+  <textarea id="browser_username" type="text" name="input_username" placeholder="Description your post..."></textarea>
+   </div>
+     <br>
+  </br>
 
+<div>
   <button>Post</button>
-</form>
+</div>
 
 <hr>
 
+
+<table border="1">
+<form>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Description</th>
+<th> </th>
+</tr>
+</form>
+
+<% @list_of_posts.each do |a_user|%>
+  <tr>
+    <td>
+     <%= a_user.id %>
+    </td>
+    <td>
+     <%= a_user.title %>
+    </td>
+    <td>
+     <%= a_user.description %>
+    </td>
+    <td>
+     Show Details
+    </td>
+  </tr>
+<% end %>
+
+</table>
